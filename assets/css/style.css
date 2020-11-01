@@ -1396,7 +1396,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .singleCommentInner ._item .__main .__inner .__content .__title {
-    color: var(--main-1);
+    color: #222;
     font-weight: bold;
     font-size: 1em;
 }
@@ -1450,7 +1450,7 @@ input:focus, select:focus, textarea:focus {
 
 .singleCommentInner ._item .__reply .__load {
     margin-bottom: .6em;
-    color: var(--main-1);
+    color: #222;
     font-weight: 500;
 }
 
@@ -1477,7 +1477,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .singleCommentInner ._item .__comment .__inner .__content .__title {
-    color: var(--main-1);
+    color: #222;
     font-weight: bold;
     font-size: 1em;
 }
@@ -1498,6 +1498,7 @@ input:focus, select:focus, textarea:focus {
     color: #555;
     position: relative;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .singleCommentInner ._item .__comment .__inner .__meta ul li:not(:last-of-type):before {
@@ -1554,9 +1555,12 @@ input:focus, select:focus, textarea:focus {
 }
 
 .pageComment .secContent,
-.pageSingleForum .secContent,
 .pageBookingForm .secContent {
     padding-bottom: 14rem;
+}
+
+.pageSingleForum .secContent {
+    padding-bottom: 18rem;
 }
 
 .pageBookingForm .__inner {
@@ -1571,7 +1575,7 @@ input:focus, select:focus, textarea:focus {
 ._label {
     font-size: 1em;
     font-weight: 700;
-    color: var(--main-1)
+    color: #222
 }
 
 ._sublabel {
@@ -1581,7 +1585,7 @@ input:focus, select:focus, textarea:focus {
 
 ._sublabel span {
     font-weight: 700;
-    color: var(--main-1)
+    color: #222
 }
 
 .__btn {
@@ -1597,68 +1601,23 @@ input:focus, select:focus, textarea:focus {
     margin: 1em auto;
     font-size: 1.2em;
     font-weight: 600;
+    border-radius: .25em;
 }
 
-.__btn:before {
-    display: block !important;
-    content: "" !important;
-    width: 0;
-    height: 0;
-    position: absolute;
-    z-index: 2;
-    transition: all 0.2s linear;
-    border-style: solid;
-    border-color: #fff;
-    opacity: 0;
-    background: none;
-    left: 2.5%;
-    top: 8%;
-    transition-duration: 0.4s;
-    border-width: 2px 0 0 2px;
-}
-
-.__btn:after {
-    display: block !important;
-    content: "" !important;
-    width: 0;
-    height: 0;
-    position: absolute;
-    z-index: 2;
-    transition: all 0.2s linear;
-    border-style: solid;
-    border-color: #fff;
-    opacity: 0;
-    background: none;
-    right: 2.5%;
-    bottom: 8%;
-    transition-duration: 0.4s;
-    border-width: 0 2px 2px 0;
-}
 
 .__btn.__btn-small {
-    padding: 10px 30px;
+    padding: 10px 20px;
 }
 
 .__btn.__btn-big {
-    padding: 15px 30px;
+    padding: 10px 30px;
 }
 
 .__btn:hover,
 .__btn:focus {
-    color: var(--main-1);
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .3) !important;
+    background: var(--hover-2);
 }
 
-.__btn:hover:before,
-.__btn:focus:before,
-.__btn:hover:after,
-.__btn:focus:after {
-    width: 98%;
-    height: 92%;
-    opacity: 1;
-    border-color: var(--main-1);
-}
 
 .pageBookingForm .select2-container .select2-selection--single {
     outline: none !important;
@@ -1725,7 +1684,7 @@ input:focus, select:focus, textarea:focus {
     }
 }
 
-.scroll-x {
+.dragscroll-x {
     display: flex;
     width: 100%;
     white-space: nowrap;
@@ -1734,6 +1693,12 @@ input:focus, select:focus, textarea:focus {
     cursor: pointer;
     padding-bottom: 10px;
     overflow: hidden;
+}
+
+@media screen and (max-width: 1199px) {
+    .dragscroll-x {
+        overflow: auto;
+    }
 }
 
 .pageBookingForm .__staff {
@@ -1848,4 +1813,135 @@ input:focus, select:focus, textarea:focus {
     .pageBookingForm .__day ul li {
         min-width: calc(100% / 4);
     }
+}
+
+.popup__gift .modal-content {
+    max-width: 420px;
+    display: block;
+    margin: 0 auto;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.popup__gift .modal-content .card {
+    border-radius: .5rem;
+}
+
+.popup__gift .card .card-header .__image {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.popup__gift .card .card-header .__image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80px;
+}
+
+.popup__gift .card .card-body ._subtitle {
+    color: #8b8b8b;
+    font-weight: 600;
+    font-size: .9em;
+    white-space: nowrap;
+    padding-right: 10px;
+}
+
+.popup__gift .card .card-body ._title {
+    font-size: 1em;
+    color: #282828;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.popup__gift .card .card-body > .__service,
+.popup__gift .card .card-body > .__price,
+.popup__gift .card .card-body > .__barcode {
+    padding: 1em 0;
+    border-top: 1px dashed #c8c8c8;
+}
+
+.popup__gift .card .card-body .__service .__content .__title,
+.popup__gift .card .card-body > .__price .__title,
+.popup__gift .card .card-body > .__barcode .__title {
+    font-size: 1.05em;
+    font-weight: 600;
+    color: var(--main-1);
+}
+
+.popup__gift .card .card-body .__service .__content .__title i,
+.popup__gift .card .card-body > .__price .__title i,
+.popup__gift .card .card-body > .__barcode .__title {
+    margin-right: 4px;
+}
+
+.popup__gift .card .card-body > .__price .__subtitle {
+    font-size: 1.2em;
+    text-align: right;
+    color: #111;
+    font-weight: 600;
+}
+
+
+.popup__gift .card .card-body .__service .__content ul li:not(:last-of-type) .__inner {
+    margin-bottom: 1em;
+}
+
+.popup__gift .card .card-body .__service .__content ul li .__inner .__description .__name {
+    font-size: 1.05em;
+    color: #282828;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.popup__gift .card .card-body .__service .__content ul li .__inner .__description .__price {
+    color: #e55f3f;
+    margin-top: .3rem;
+}
+
+.popup__gift .card .card-body .__service .__content ul li .__inner .__time {
+    font-size: .9em;
+    text-align: right;
+    color: #666;
+}
+
+.popup__gift .card .card-body .__barcode .__image img {
+    height: 80px;
+}
+
+.popup__gift .card .card-body > .__barcode .__priceText {
+    font-size: 1.05em;
+    font-weight: 600;
+    color: var(--main-1);
+}
+
+.popup__gift .card .card-body > .__barcode .__priceNumber {
+    font-size: 1.2em;
+    text-align: right;
+    color: #111;
+    font-weight: 600;
+}
+
+.popup__gift .card .card-body > .__barcode .__desc {
+    font-size: 1em;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #969696;
+}
+
+.popup__gift .card .card-body > .__barcode .__desc span {
+    color: #e55f3f;
+    font-weight: 700;
+}
+
+.popup__gift .card .card-body > .__barcode .__desc:last-of-type {
+    margin-bottom: 0;
+}
+
+.popup__gift .modal-footer {
+    justify-content: center;
+}
+
+.popup__gift .modal-footer .__btn {
+    margin: 0;
+    padding: .5rem 20px;
 }

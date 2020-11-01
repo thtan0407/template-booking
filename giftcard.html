@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap-4.3/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/slick/slick.css">
+    <link rel="stylesheet" href="assets/plugins/select2/select2.min.css">
+
+    <!--  Google Font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+          rel="stylesheet">
+
+
+    <!--  Theme style  -->
+    <link rel="stylesheet" href="assets/fonts/flaticon/flaticon.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Popup GiftCard</title>
+</head>
+<body>
+<div class="pageBackground">
+    <div class="pageIndex pageBookingForm">
+        <div class="secHeader">
+            <div class="container p-0">
+                <div class="row row-10 align-items-center">
+                    <div class="col-12">
+                        <div class="headerRight">
+                            <div class="headerHeading">
+                                GiftCard
+                            </div>
+                            <div class="headerDesc">
+                                30/10/2020
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="secContent pt-0">
+            <div class="container p-0">
+                <div class="secBackground pb-3">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <div class="__inner">
+                                <button type="button" data-toggle="modal" data-target="#gift__popup"
+                                        class="__btn __btn-big">
+                                    <i class="fal fa-gift-card"></i>
+                                    Add Gift card
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="secFooter">
+            <div class="commentFooter">
+                <div class="row no-gutters align-items-center">
+                    <div class="col-12">
+                        <div class="commentImage">
+                            <ul class="list-unstyled mb-0 d-flex align-items-center justify-content-start flex-wrap">
+                                <li>
+                                    <a href="javascript:void(0)"><i class="fal fa-times"></i></a>
+                                    <div class="__image" style="background-image: url('assets/image/blog-1.jpg')"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="commentInner">
+                            <input type="text" placeholder="Viết bình luận..." class="commentText form-control">
+                            <a href="javascript:void(0)" id="callInputImage">
+                                <i class="fas fa-image"></i>
+                                <input type="file" multiple="" id="addImage" class="inputImage">
+                            </a>
+                            <button type="submit">Đăng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-10 align-items-center">
+                <div class="col-4">
+                    <div class="footerItem footerAppointment text-center">
+                        <a href="javascript:void(0)">
+                            <span><i class="flaticon-calendar"></i></span>
+                            <span>Appointment</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="footerItem footerHome text-center">
+                        <a href="javascript:void(0)">
+                            <i class="fal fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="footerItem footerAccount text-center">
+                        <a href="javascript:void(0)">
+                            <span><i class="fal fa-user"></i></span>
+                            <span>Account</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade popup__gift" id="gift__popup" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <div class="card border-0">
+                    <div class="card-header p-0">
+                        <div class="__image">
+                            <img src="assets/image/logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card-body p-3 border-0">
+                        <div class="__content">
+                            <div class="row no-gutters mb-3">
+                                <div class=" _subtitle col-6">
+                                    Ngày & giờ:
+                                </div>
+                                <div class="_title col-6">
+                                    02:27 PM - 01/11/2020
+                                </div>
+                            </div>
+                            <div class="row no-gutters mb-3">
+                                <div class="_subtitle col-6">
+                                    Phương thức thanh toán:
+                                </div>
+                                <div class="_title col-6">
+                                    Thanh toán tiền mặt
+                                </div>
+                            </div>
+                        </div>
+                        <div class="__price">
+                            <div class="row no-gutters mb-3">
+                                <div class="__title col-6">
+                                    <i class="far fa-tags fa-rotate-90"></i>Tips:
+                                </div>
+                                <div class="__subtitle col-6">
+                                    $04.00
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="__title col-6">
+                                    <i class="far fa-percent"></i>Discount:
+                                </div>
+                                <div class="__subtitle col-6">
+                                    30%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="__service">
+                            <div class="__content">
+                                <div class="row mb-3 no-gutters">
+                                    <div class="col-12">
+                                        <div class="__title">
+                                            <i class="far fa-clipboard-list"></i> Services
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <div class="__inner">
+                                            <div class="row no-gutters">
+                                                <div class="col-6">
+                                                    <div class="__description">
+                                                        <div class="__name">
+                                                            Lorem ipsum dolor sit.
+                                                        </div>
+                                                        <div class="__price">
+                                                            $50.00
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="__time">
+                                                        02:42 PM - 01/11/2020
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="__inner">
+                                            <div class="row no-gutters">
+                                                <div class="col-6">
+                                                    <div class="__description">
+                                                        <div class="__name">
+                                                            Lorem ipsum dolor sit.
+                                                        </div>
+                                                        <div class="__price">
+                                                            $50.00
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="__time">
+                                                        02:42 PM - 01/11/2020
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="__inner">
+                                            <div class="row no-gutters">
+                                                <div class="col-6">
+                                                    <div class="__description">
+                                                        <div class="__name">
+                                                            Lorem ipsum dolor sit.
+                                                        </div>
+                                                        <div class="__price">
+                                                            $50.00
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="__time">
+                                                        02:42 PM - 01/11/2020
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="__inner">
+                                            <div class="row no-gutters">
+                                                <div class="col-6">
+                                                    <div class="__description">
+                                                        <div class="__name">
+                                                            Lorem ipsum dolor sit.
+                                                        </div>
+                                                        <div class="__price">
+                                                            $50.00
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="__time">
+                                                        02:42 PM - 01/11/2020
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="__inner">
+                                            <div class="row no-gutters">
+                                                <div class="col-6">
+                                                    <div class="__description">
+                                                        <div class="__name">
+                                                            Lorem ipsum dolor sit.
+                                                        </div>
+                                                        <div class="__price">
+                                                            $50.00
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="__time">
+                                                        02:42 PM - 01/11/2020
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="__barcode">
+                            <div class="row mb-3 no-gutters">
+                                <div class="col-12">
+                                    <div class="__title">
+                                        <i class="far fa-gift"></i> Gift card
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters mb-3">
+                                <div class="col-12">
+                                    <div class="__image">
+                                        <img src="assets/image/barcode.png" class="w-100 img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters mb-3">
+                                <div class="col-6">
+                                    <div class="__priceText">
+                                        Price
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="__priceNumber">
+                                        $46.00
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col-12">
+                                    <p class="__desc">
+                                        <span>*</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad
+                                        aliquam animi aspernatur aut consequatur deserunt magnam nihil nisi numquam
+                                        odio, perferendis provident recusandae reprehenderit sapiente sint sunt
+                                        veritatis voluptas?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer rounded-0">
+                <button type="button" class="__btn __btn-small">Save</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/plugins/jquery.min.js"></script>
+<script src="assets/plugins/bootstrap-4.3/popper-1.14.min.js"></script>
+<script src="assets/plugins/bootstrap-4.3/bootstrap.min.js"></script>
+<script src="assets/plugins/slick/slick.min.js"></script>
+<script src="assets/plugins/select2/select2.min.js"></script>
+<script src="assets/plugins/dragscroll.js"></script>
+<script src="assets/js/theme-script.js"></script>
+</body>
+</html>
